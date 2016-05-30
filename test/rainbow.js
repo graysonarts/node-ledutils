@@ -6,9 +6,9 @@ describe('fill_rainbow', () => {
   it('generates a gradient', () => {
     var arr = new Array(3);
     fill_rainbow(arr, 0, 45);
-    arr[0].should.equal('#ff0000');
-    arr[1].should.equal('#ffbf00');
-    arr[2].should.equal('#80ff00');
+    arr[0].hex().should.equal('#ff0000');
+    arr[1].hex().should.equal('#ffbf00');
+    arr[2].hex().should.equal('#80ff00');
   });
 
   it('can fill only a portion of the array', () => {
@@ -17,9 +17,9 @@ describe('fill_rainbow', () => {
     arr[4] = '#000000';
     fill_rainbow(arr, 0, 45, 1, 3);
     arr[0].should.equal('#000000');
-    arr[1].should.equal('#ff0000');
-    arr[2].should.equal('#ffbf00');
-    arr[3].should.equal('#80ff00');
+    arr[1].hex().should.equal('#ff0000');
+    arr[2].hex().should.equal('#ffbf00');
+    arr[3].hex().should.equal('#80ff00');
     arr[4].should.equal('#000000');
   });
 
