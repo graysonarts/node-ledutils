@@ -1,6 +1,6 @@
 {
-  "name": "colorutils",
-  "version": "1.0.0",
+  "name": "ledutils",
+  "version": "0.0.1",
   "description": "utility functions for manipulating arrays of colors",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/RussTheAerialist/node-colorutils.git"
+    "url": "git+ssh://git@github.com/RussTheAerialist/node-ledutils.git"
   },
   "keywords": [
     "color",
@@ -17,9 +17,9 @@
   "author": "Russell Hay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RussTheAerialist/node-colorutils/issues"
+    "url": "https://github.com/RussTheAerialist/node-ledutils/issues"
   },
-  "homepage": "https://github.com/RussTheAerialist/node-colorutils#readme",
+  "homepage": "https://github.com/RussTheAerialist/node-ledutils#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
