@@ -23,8 +23,8 @@ describe('led_map', () => {
   it('should convert color objects, and write them to a node-pixel object', () => {
     var fakeStrip = new FakeStrip();
     var colors = new Array(3);
-    fill_rainbow(colors, 0, 45);
-    led_map(colors, fakeStrip);
+    fill_rainbow({arr: colors, initialHue: 0, hueDelta: 45});
+    led_map({arr: colors, strip: fakeStrip});
     fakeStrip.pixels[0].should.equal('#ff0000');
     fakeStrip.pixels[1].should.equal('#ffbf00');
     fakeStrip.pixels[2].should.equal('#80ff00');
@@ -33,8 +33,8 @@ describe('led_map', () => {
   it('should be able to set colors in the middle of the strip', () => {
     var fakeStrip = new FakeStrip();
     var colors = new Array(3);
-    fill_rainbow(colors, 0, 45);
-    led_map(colors, fakeStrip, 1);
+    fill_rainbow({arr: colors, initialHue: 0, hueDelta: 45});
+    led_map({arr: colors, strip: fakeStrip, offset: 1});
     fakeStrip.pixels[0].should.equal('#000000');
     fakeStrip.pixels[1].should.equal('#ff0000');
     fakeStrip.pixels[2].should.equal('#ffbf00');
