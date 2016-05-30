@@ -22,6 +22,8 @@
   "homepage": "https://github.com/RussTheAerialist/node-ledutils#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "johnny-five": "^0.9.51",
+    "mocha": "^2.5.3",
+    "node-pixel": "^0.6.1"
   }
 }
