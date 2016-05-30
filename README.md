@@ -8,7 +8,7 @@ onecolor objects to the strip, color range generation, gradient generation (soon
 
 See the examples directory.
 
-![Example Rainbow wipe with ledutils](//gifs.com/embed/qxmV23)
+![Example Rainbow wipe with ledutils](http://share.gifyoutube.com/qxmV23.gif)
 
 ## usage
 
