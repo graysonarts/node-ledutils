@@ -4,6 +4,12 @@ A small collection of utilities to make it easier to work with
 [node-pixel](https://github.com/ajfisher/node-pixel), including mapping an array of
 onecolor objects to the strip, color range generation, gradient generation (soon)
 
+## examples
+
+See the examples directory.
+
+![Example Rainbow wipe with ledutils](https://gifs.com/gif/qxmV23)
+
 ## usage
 
 ### fill_rainbow
