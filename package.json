@@ -1,0 +1,27 @@
+{
+  "name": "colorutils",
+  "version": "1.0.0",
+  "description": "utility functions for manipulating arrays of colors",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RussTheAerialist/node-colorutils.git"
+  },
+  "keywords": [
+    "color",
+    "led"
+  ],
+  "author": "Russell Hay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RussTheAerialist/node-colorutils/issues"
+  },
+  "homepage": "https://github.com/RussTheAerialist/node-colorutils#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
