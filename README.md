@@ -1,8 +1,8 @@
 # ledutils
 
-A small collection of utilities to make it easier to work with node-pixel, including
-mapping an array of onecolor objects to the strip, color range generation, gradient
-generation (soon)
+A small collection of utilities to make it easier to work with
+[node-pixel](https://github.com/ajfisher/node-pixel), including mapping an array of
+onecolor objects to the strip, color range generation, gradient generation (soon)
 
 ## usage
 
