@@ -12,6 +12,10 @@ See the examples directory.
 
 ## usage
 
+### fill_solid
+
+fill_solid fills the entire array with a specific color
+
 ### fill_rainbow
 
 fill_rainbow generates a rainbow of color by manipulating the hue with a delta
@@ -35,6 +39,28 @@ The previous code will generate the following colors in the array:
 ![color 80ff00](http://placehold.it/35/80ff00/000000)
 ![color 00ff40](http://placehold.it/35/00ff40/000000)
 ![color 00ffff](http://placehold.it/35/00ffff/000000)
+
+### fill_gradient
+
+fill_gradient fills the entire array with a gradient [startColor,endColor)
+
+```javascript
+var leds = require('ledutils');
+var colors = new Array(5);
+leds.fill_gradient({
+  arr: colors,
+  startColor: 'blue',
+  endColor: 'orange'
+});
+```
+
+The previous code will generate the following colors in the array:
+
+![color 0000ff](http://placehold.it/35/0000ff/000000)
+![color 3321cc](http://placehold.it/35/3321cc/000000)
+![color 664299](http://placehold.it/35/664299/000000)
+![color 996366](http://placehold.it/35/996366/000000)
+![color cc8433](http://placehold.it/35/cc8433/000000)
 
 ### led_map
 
