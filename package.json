@@ -1,6 +1,6 @@
 {
   "name": "ledutils",
-  "version": "0.1.0-0",
+  "version": "0.1.0",
   "description": "utility functions for manipulating arrays of colors",
   "main": "index.js",
   "scripts": {
