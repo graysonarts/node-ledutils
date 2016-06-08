@@ -2,7 +2,9 @@
 
 A small collection of utilities to make it easier to work with
 [node-pixel](https://github.com/ajfisher/node-pixel), including mapping an array of
-onecolor objects to the strip, color range generation, gradient generation (soon)
+onecolor objects to the strip, color range generation, gradient generation (soon).
+
+Many of these functions are javascript ports of the functions that exist in [FastLED](http://fastled.io/).
 
 ## examples
 
