@@ -1,10 +1,11 @@
 {
   "name": "ledutils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "utility functions for manipulating arrays of colors",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "ss": "semistandard --verbose | snazzy"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "johnny-five": "^0.9.51",
     "mocha": "^2.5.3",
     "node-pixel": "^0.6.1"
+  },
+  "semistandard": {
+    "globals": [ "it", "describe" ]
   }
 }
