@@ -4,10 +4,10 @@ var leds = require('../index');
 var colors = new Array(8);
 var board = new five.Board();
 var strip;
-var anim = function() {
+var anim = (function () {
   var step = 0;
-  return function() {
-    leds.fill_rainbow({
+  return function () {
+    leds.fillRainbow({
       arr: colors,
       initialHue: step,
       hueDelta: 10
@@ -16,13 +16,13 @@ var anim = function() {
     leds.led_map({arr: colors, strip: strip});
     strip.show();
   };
-}();
+})();
 
 board.on('ready', () => {
   strip = new pixel.Strip({
     board: board,
     controller: 'FIRMATA',
-    strips: [ { pin: 6, length: 8} ]
+    strips: [ {pin: 6, length: 8} ]
   });
 
   strip.on('ready', () => {

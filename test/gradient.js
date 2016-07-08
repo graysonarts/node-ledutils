@@ -1,18 +1,17 @@
 require('chai').should();
-var expect = require('chai').expect;
-var fill_gradient = require('../index').fill_gradient;
-var fill_solid = require('../index').fill_solid;
+var fillGradient = require('../index').fillGradient;
+var fillSolid = require('../index').fillSolid;
 
-describe('fill_gradient', () => {
+describe('fillGradient', () => {
   it('generates a gradient', () => {
     var arr = new Array(5);
-    fill_solid({
+    fillSolid({
       arr: arr
     });
-    fill_gradient({
+    fillGradient({
       arr: arr,
-      startColor: "#ff0000",
-      endColor: "#00ff00"
+      startColor: '#ff0000',
+      endColor: '#00ff00'
     });
 
     arr[0].hex().should.equal('#ff0000');
@@ -20,9 +19,5 @@ describe('fill_gradient', () => {
     arr[2].hex().should.equal('#996600');
     arr[3].hex().should.equal('#669900');
     arr[4].hex().should.equal('#33cc00');
-  });
-
-  it('can fill only a portion of the array', () => {
-    var arr = new Array(5);
   });
 });

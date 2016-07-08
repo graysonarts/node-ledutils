@@ -1,16 +1,16 @@
 require('chai').should();
-var led_map = require('../index').led_map;
-var fill_rainbow = require('../index').fill_rainbow;
-var color = require('onecolor');
+var ledMap = require('../index').ledMap;
+var fillRainbow = require('../index').fillRainbow;
 
-function FakeStrip() {
+function FakeStrip () {
   this.pixels = new Array(this.stripLength());
-  for(var i=0; i<this.pixels.length; i++) {
+  for (var i = 0; i < this.pixels.length; i++) {
     this.pixels[i] = '#000000';
   }
-};
-FakeStrip.prototype.stripLength = function() { return 5; };
-FakeStrip.prototype.pixel = function(pixelIndex) {
+}
+
+FakeStrip.prototype.stripLength = function () { return 5; };
+FakeStrip.prototype.pixel = function (pixelIndex) {
   var self = this;
   return {
     'color': function (value) {
@@ -19,12 +19,12 @@ FakeStrip.prototype.pixel = function(pixelIndex) {
   };
 };
 
-describe('led_map', () => {
+describe('ledMap', () => {
   it('should convert color objects, and write them to a node-pixel object', () => {
     var fakeStrip = new FakeStrip();
     var colors = new Array(3);
-    fill_rainbow({arr: colors, initialHue: 0, hueDelta: 45});
-    led_map({arr: colors, strip: fakeStrip});
+    fillRainbow({arr: colors, initialHue: 0, hueDelta: 45});
+    ledMap({arr: colors, strip: fakeStrip});
     fakeStrip.pixels[0].should.equal('#ff0000');
     fakeStrip.pixels[1].should.equal('#ffbf00');
     fakeStrip.pixels[2].should.equal('#80ff00');
@@ -33,8 +33,8 @@ describe('led_map', () => {
   it('should be able to set colors in the middle of the strip', () => {
     var fakeStrip = new FakeStrip();
     var colors = new Array(3);
-    fill_rainbow({arr: colors, initialHue: 0, hueDelta: 45});
-    led_map({arr: colors, strip: fakeStrip, offset: 1});
+    fillRainbow({arr: colors, initialHue: 0, hueDelta: 45});
+    ledMap({arr: colors, strip: fakeStrip, offset: 1});
     fakeStrip.pixels[0].should.equal('#000000');
     fakeStrip.pixels[1].should.equal('#ff0000');
     fakeStrip.pixels[2].should.equal('#ffbf00');
